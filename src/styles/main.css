@@ -1,0 +1,43 @@
+:root{
+      --bg:#0f172a;
+      --accent:#ff7ab6;
+      --text:#f8fafc;
+      --muted: rgba(248,250,252,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%; margin:0;}
+    body{background: radial-gradient(circle at top,#1a2038 0%, #0b1220 100%); color:var(--text); display:flex; align-items:center; justify-content:center;}
+    .wrap{width:min(920px,95%); background: rgba(255,255,255,0.03); border-radius:18px; padding:34px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);}
+    h1{margin:0 0 12px; font-size:28px;}
+    .stage{height:360px; border-radius:12px; background:rgba(255,255,255,0.02); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; cursor: pointer;}
+    .line{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;}
+    .textBubble{background: rgba(255,255,255,0.05); padding:24px 28px; border-radius:14px; font-size:22px; max-width:80%; text-align:center;}
+    #particles{position:absolute; inset:0; pointer-events:none;}
+    .flower,.qmark{position:absolute; animation:fall linear forwards;}
+    @keyframes fall{to{transform: translateY(400px) rotate(360deg); opacity:0}}
+    .brain{position:absolute; font-size:28px; animation:floatBrain 4s ease-in-out infinite;}
+    @keyframes floatBrain{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}
+    .star{position:absolute; color:#fff; font-size:18px; animation:twinkle 2s ease-in-out infinite;}
+    @keyframes twinkle{0%,100%{opacity:0.2}50%{opacity:1}}
+    .math{position:absolute; font-size:26px; animation:floatMath 3s ease-in-out infinite;}
+    @keyframes floatMath{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-15px) rotate(10deg)}100%{transform:translateY(0) rotate(0)}}
+    .atom{position:absolute; width:160px; height:160px; display:flex; align-items:center; justify-content:center;}
+    .nucleus{width:26px;height:26px;border-radius:50%; background:linear-gradient(90deg,#ffde7a,#ff8ab6); box-shadow:0 0 18px rgba(255,138,182,0.45)}
+    .electron{position:absolute; width:12px;height:12px;border-radius:50%; background:#fff;}
+    @keyframes orbit{from{transform: rotate(0deg)} to{transform: rotate(360deg)}}
+
+    @media (max-width: 768px) {
+      .wrap {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .stage {
+        height: 300px;
+      }
+      .textBubble {
+        font-size: 18px;
+        padding: 18px 22px;
+      }
+    }
